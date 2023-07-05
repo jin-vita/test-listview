@@ -8,7 +8,7 @@ import com.jinvita.testlistview.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-    private val dummy1 = listOf(
+    private val dummy = listOf(
         "철이랑 수철이랑 수",
         "영이랑 희영이랑 희",
         "연이랑 수연이랑 수",
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, dummy1)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, dummy)
         with(binding) {
             listView.adapter = adapter
             listView.setOnItemClickListener { parent, view, position, id ->
